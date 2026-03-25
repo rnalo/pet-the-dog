@@ -1,0 +1,36 @@
+body {
+    background-color: #fdf5e6; /* 温かいベージュ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+}
+
+.container {
+    text-align: center;
+    user-select: none;
+}
+
+#dog-image {
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+}
+
+.stats {
+    margin-top: 30px;
+}
+
+#counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #a0522d; /* 茶色 */
+}
+
+#message {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
