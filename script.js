@@ -28,20 +28,22 @@ dogImage.addEventListener('click', () => {
         randomBark.currentTime = 0;
         randomBark.play();
         
-        // --- 通常の進化（なつき度）切り替え ---
-        if (count >= 100) {
-            dogImage.src = "pet_darui_dog.png";
-            messageP.textContent = "なでられ疲れて寝ちゃいそうワン...";
-        } else if (count >= 50) {
-            dogImage.src = "run_dog.png";
-            messageP.textContent = "うれしすぎて走り回っちゃうワン！";
-        } else if (count >= 20) {
-            dogImage.src = "pet_omocha_inu.png";
-            messageP.textContent = "おもちゃ持ってきたワン！遊ぶワン！";
-        } else {
-            dogImage.src = "dog_akitainu.png";
-            messageP.textContent = "もっともっと！ワンワン！";
-        }
+    // --- script.js の該当部分を書き換え ---
+
+    // --- 進化（なつき度）による画像切り替え ---
+    if (count >= 100) {
+        dogImage.src = "pet_darui_dog.png"; // 100回：だらける
+        messageP.textContent = "もう、一生離さないワン！（大好き！）";
+    } else if (count >= 50) {
+        dogImage.src = "sleep_animal_dog.png"; // 50回：眠る（追加したイラスト！）
+        messageP.textContent = "安心するワン...（ウトウト）";
+    } else if (count >= 20) {
+        dogImage.src = "pet_omocha_inu.png"; // 20回：おもちゃ
+        messageP.textContent = "もっと！もっと遊ぶワン！";
+    } else {
+        dogImage.src = "dog_akitainu.png"; // 初期：秋田犬
+        messageP.textContent = "もっともっと！ワンワン！";
+    }
     }
 
     // 犬らしいプルプルした動きのアニメーション
